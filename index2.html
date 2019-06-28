@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aish Chaim</title>
+
+    <meta name="author" content="Elisheva Meyerowitz" />
+    <meta name="description" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Bootstrap 4 Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="mystyle2.css">
+
+
+    <!-- Font Awesome Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"/>
+
+    <!-- Google Fonts -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+      type="text/css"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script"
+      rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Calligraffitti|Charm|Courgette|Dancing+Script|Petit+Formal+Script|Satisfy"
+      rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Parisienne"
+      rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Ledger"
+      rel="stylesheet"/>
+        
+    <script>
+      $(document).ready(function() {
+        $("#myCarousel").on("slide.bs.carousel", function(e) {
+          var $e = $(e.relatedTarget);
+          var idx = $e.index();
+          var itemsPerSlide = 3;
+          var totalItems = $(".carousel-item").length;
+      
+          if (idx >= totalItems - (itemsPerSlide - 1)) {
+            var it = itemsPerSlide - (totalItems - idx);
+            for (var i = 0; i < it; i++) {
+              // append slides to end
+              if (e.direction == "left") {
+                $(".carousel-item")
+                  .eq(i)
+                  .appendTo(".carousel-inner");
+              } else {
+                $(".carousel-item")
+                  .eq(0)
+                  .appendTo($(this).find(".carousel-inner"));
+              }
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+<header>
+    <div class="container d-flex justify-content-between nav-container"><!--nav-container holds navbar and parsha-flex-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="index2.html"> <img src="images/flame-solid-transparent3.png" width="60" height="40" class="d-inline-block align-top" alt="navigation menu with Aish Chaim logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <!--<span class="navbar-toggler-icon"></span>-->
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index2.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="about-us.html">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Programs
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" id="ongoing-programs" href="#">Ongoing Programs</a>
+                        <a class="dropdown-item" id="upcoming-programs" href="#">Upcoming Programs</a>
+                        <a class="dropdown-item" id="past-programs" href="#">Past Progams</a>
+                      </div>
+                    </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="#"><button>DONATE</button></a>
+              </li>
+              
+            </ul>
+          </div><!--apart of .collapse-->
+        </nav>
+                <div class="mobile-logo"><img id="logo-tagline" src="images/logo.png" alt="Aish Chaim logo"></div>
+        
+        <div class="parsha-flex">
+            <div id="parsha"><h4><span style="display:block";>June 28, 2019</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="display:block";><h5>Parshat of the Week: Shlach L'chah</h5></span> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="display:block";>Candlelighting: 8:15pm</span> &nbsp&nbsp&nbsp&nbsp<span style="display:block";>Shabbat Ends: 9:23pm</span></h2></div>
+        </div>
+
+        
+      </div> <!--closing div container for flex-box and .nav-container-->
+      <div class="logo2"><img id="logo-tagline" src="images/logo.png" alt="Aish Chaim logo"></div>
+         
+  
+
+</header>
+
+<div class="mobile-image">
+    <img id="israel" src="images/israel-trip-with-slogan.jpg">
+    <div class="welcome-message"><h5><p><span style="text-shadow: 1.5px 1.5px black;">Aish Chaim welcomes you for Shabbat and Holiday services!</span></br></p>
+        <p><h6>Please join our uplifting tefilah (prayer) and be part of our community.</h6></p>
+        <p><h6>Learners classes also run parallel to the main service on Shabbat morning.</h6>
+        <p> Click <a href="davening.html">here</a> for this week's Shabbat schedule.</p>
+        </div>
+</div>
+
+<div class="largescreen-image">
+    <img id="largescreen-main-image" src="images/logo-front-draft3.jpg">
+
+
+</div>
+
+
+
+<div class="row">
+  <div id="side-bar" class="col-sm-3">
+    <!--in the future keep this as a place for UPCOMING PROGRAMS, but for now, it will contain the davening schedule-->
+  </div>
+
+  <div id="main" class="col-sm-9">
+    <div class="container-fluid">
+            <h1 class="text-center mb-3"><span style="text-shadow: 2px 2px gray;">ONGOING PROGRAMS</span></h1>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner row w-100 mx-auto">
+                <div class="carousel-item col-md-4 active">
+                  <div class="card">
+                    <img class="card-img-top img-fluid" src="images/puzzle.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">Mondays 8:15pm</h4>
+                      <p class="card-text"><i>Parsha Perspectives (Piecing It All Together)</i>: All are welcome to join Rabbi Ungar on Mondays for a discussion on Philosophy, life and living based on the weekly Torah portion.</p>
+                      <p class="card-text"><small class="text-muted">116 Union Avenue, Bala Cynwyd PA 19004</small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item col-md-4">
+                  <div class="card">
+                    <img class="card-img-top img-fluid" src="images/calm-waters.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">Mondays</h4>
+                      <p class="card-text"><i>Developing a Personal Relationship With the Creator</i>: At the Elbaum Residence.</p>
+                      <p class="card-text"><small class="text-muted">115 Summit Lane, Bala Cynwyd PA 19004</small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item col-md-4">
+                        <div class="card">
+                          <img class="card-img-top img-fluid" src="images/hands-glow-cropped2.png" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-title">Tuesdays</h4>
+                            <p class="card-text"><i>Living With Emunah</i>: Let go of life's stress by acknowledging Hashem's presence in your day-to-day life. </p>
+                            <p class="card-text"><small class="text-muted">7715 Montgomery Avenue, Elkins Park PA 19027</small></p>
+                          </div>
+                        </div>
+                      </div>
+                <div class="carousel-item col-md-4">
+                  <div class="card">
+                    <img class="card-img-top img-fluid" src="images/flower-growing.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">Tuesday Nights 7:30pm</h4>
+                      <p class="card-text"><i>Self-Improvement Through Torah</i> with Rabbi Dovid Wachs. </p>
+                      <p class="card-text"><small class="text-muted">7715 Montgomery Avenue, Elkins Park PA 19027</small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item col-md-4">
+                  <div class="card">
+                    <img class="card-img-top img-fluid" src="images/journey-through-torah.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">Tuesdays Nights 8:05pm</h4>
+                      <p class="card-text"><i>Journey Through the Parsha with Rabbi Moshe Ungar</i></p>
+                      <p class="card-text"><small class="text-muted">7715 Montgomery Avenue, Elkins Park PA 19027</small></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item col-md-4">
+                  <div class="card">
+                    <img class="card-img-top img-fluid" src="images/parsha-gems.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">Wednesdays</h4>
+                      <p class="card-text"><i>Parsha Gems</i>: Gain a practical and deeper understanding with the weekly Torah portion. At the Perlberger residence.</p>
+                      <p class="card-text"><small class="text-muted">330 Linden Lane, Merion Station PA 19066</small></p>
+                    </div><!--closing div to card-body-->
+                  </div><!--closing div to card-->
+                </div><!--closing div to carousel-item-->
+                
+              </div><!--closing div to carousel-inner-->
+              <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div><!--closing div to myCarousel-->
+    </div><!--closing div to container-fluid-->
+</div> <!--closing div to #main-->
+</div> <!--closing div to .row (NOT SURE IF ROW IS NEEDED-->
+
+    <!---<div id="carouselExampleIndicators" class="carousel slide" data-interval="4000" data-ride="carousel">
+            <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+        <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" id="parsha-perspectives" src="images/parsha-perspectives.jpg" alt="First slide">
+                        <div class="carousel-caption d-md-block" id="sunflowers">
+                            <h5></h5>
+                        </div>
+                  </div>
+              
+                <div class="carousel-item">
+                    <img class="d-block w-100" id="image-ship" src="images/tuesday-nights.jpg" alt="Second slide">
+                        <div class="carousel-caption d-md-block" id="bonvoyage">
+                            <h5></h5>
+                        </div>
+                  </div>
+              
+                <div class="carousel-item">
+                    <img class="d-block w-100" id="image-cupcakes" src="images/monday-meditation.jpg" alt="Third slide">
+                        <div class="carousel-caption d-md-block" id="cupcakes">
+                            <h5></h5>
+                        </div>
+                  </div>
+        </div> end div .carousel-inner?
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div> end div .carouselExampleIndicators-->
+ 
+<div class="mission-statement">
+<p><h2 id="mission-statement-id">OUR MISSION <img id="torah-scroll" src="images/torah-scroll-simple.png"></h2></p>
+    <p>Etz Chaim and Aish Philadelphia have entered into a new collaboration! Both organizations have a rich, decades-long history of engaging the greater community in Jewish education and engagement. 
+Beginning on January 1, 2019, these two entities began to work together as one unified entity — Aish Chaim.</p>
+<p>Combining the best of both organizations, Aish Chaim is a platform for every Jewish person in Greater Philadelphia 
+to find their place among ‘The Tribe’. With a rich blend of learning and engagement programs, as well as our spirit-filled Shabbat services with optional learning groups, Aish Chaim is truly welcoming for all those who choose to join in.</p>
+We hope to see you soon at one of our Shabbat service and learning programs!</div>
+</p>
+
+  <div class="form-box">
+    <form action="/my-handling-form-page" method="post">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name">
+      </div>
+      <div>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_mail">
+      </div>
+      <div>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+      <div class="button">
+        <button type="submit">Send your message</button>
+      </div>
+    </form>
+</div>
+  
+
+
+
+    <!-- CDN Script for JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CDN Script for Popper JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CDN Script for bootstrap JS -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
